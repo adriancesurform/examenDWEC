@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Iniciar sesión</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="login-container">
+  <h2>Registro de usuario</h2>
+
+  <form (ngSubmit)="onRegister()" method="POST">
+    <mat-form-field appearance="outline" class="full-width">
+      <mat-label>Username</mat-label>
+      <input matInput type="text" [(ngModel)]="username" name="username" required>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="full-width">
+      <mat-label>Password</mat-label>
+      <input matInput type="password" [(ngModel)]="password" name="password" required>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="full-width">
+      <mat-label>Email</mat-label>
+      <input matInput type="email" [(ngModel)]="email" name="email" required>
+    </mat-form-field>
+
+    <button mat-raised-button type="submit" class="full-width btnEnviar">
+      Registrarse
+    </button>
+
+    <a routerLink="/login" style="margin-top: -10px">¿Ya tienes cuenta? Inicia sesión aquí.</a>
+  </form>
+  <br>
+</div>
+</body>
+</html>

@@ -1,0 +1,101 @@
+body, html {
+  background-color: #000;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Roboto', sans-serif;
+  color: white;
+}
+
+.login-container {
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 30px;
+  border: 2px solid greenyellow;
+  border-radius: 15px;
+  background-color: #111;
+  box-shadow: 0px 5px 10px rgba(0, 255, 0, 0.3);
+  overflow: hidden;
+}
+
+.login-container h2 {
+  color: greenyellow;
+  margin-bottom: 20px;
+}
+
+.full-width {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.mat-form-field {
+  color: white;
+}
+
+.mat-form-field .mat-label {
+  color: greenyellow;
+}
+
+.mat-form-field .mat-input-underline {
+  background-color: greenyellow;
+}
+
+
+.mat-raised-button {
+  background-color: greenyellow;
+  color: #111;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-weight: 500;
+  text-transform: uppercase;
+  box-shadow: 0px 3px 6px rgba(0, 255, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.mat-raised-button:hover {
+  background-color: #00ff00;
+  transform: translateY(-2px);
+  box-shadow: 0px 5px 8px rgba(0, 255, 0, 0.3);
+}
+
+a {
+  color: greenyellow;
+  text-decoration: none;
+  margin-top: 10px;
+  display: block;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+input {
+  margin-left: 10px;
+}
+
+.btnEnviar:hover {
+  text-decoration: underline;
+}
+
+.btnToken {
+  border: 1px solid greenyellow;
+  transition: transform 0.1s ease-in-out;
+  margin-top: 20px;
+  border-radius: 8px;
+}
+
+.btnToken:hover {
+  transform: scale(1.02);
+  background-color: greenyellow;
+  color: black;
+  border: 2px solid white;
+  text-decoration: underline;
+}

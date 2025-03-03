@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Iniciar sesión</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="login-container">
+  <h2>Iniciar sesión</h2>
+
+  <form (ngSubmit)="onLogin()" method="POST">
+    <mat-form-field appearance="outline" class="full-width">
+      <mat-label>Username</mat-label>
+      <input matInput type="text" [(ngModel)]="username" name="username" required>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="full-width">
+      <mat-label>Password</mat-label>
+      <input matInput type="password" [(ngModel)]="password" name="password" required>
+    </mat-form-field>
+
+    <button mat-raised-button type="submit" class="full-width btnEnviar">
+      Iniciar sesión
+    </button>
+
+    <a routerLink="/signup" style="margin-top: -10px">Crear cuenta</a>
+  </form>
+  <br>
+  <form *ngIf="mostrarBoton" (ngSubmit)="sendToken()">
+    <p>Guarda este Token para mas adelante:</p>
+      <textarea name="" id="" cols="30" rows="10"> {{token}}</textarea>
+
+    <button type="submit" mat-raised-button class="full-width" class="btnToken" routerLink="/entradas">
+      <span>IR A LAS ENTRADAS</span>
+    </button>
+  </form>
+
+
+
+</div>
+</body>
+</html>
